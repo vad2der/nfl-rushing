@@ -54,4 +54,51 @@ We will evaluate you on your ability to solve the problem defined in the require
 If you have any questions regarding requirements, do not hesitate to email your contact at theScore for clarification.
 
 ### Installation and running this solution
-... TODO
+
+#### Prerequisites:
+1. Elasticsearch (the solution was build with version 7.10)
+   [installation guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
+2. PostgreSQL
+   installation guide(https://www.postgresql.org/download/linux/ubuntu/)
+3. Ruby
+   installation guide(https://www.ruby-lang.org/en/documentation/installation/)
+4. Angular CLI + node
+   [installation guide](https://cli.angular.io/)
+
+#### Environmental variables
+    One need to set `DATABASE_USERNAME`, `USERNAME_PASSWORD` and `ELASTICSEARCH_HOST`.
+    Recomendation to use `direnv` tool (put your values to [./players_backend/.envrc](./players_backend/.envrc)).
+    Additional info on direnv is [here](https://github.com/direnv/direnv/blob/master/docs/installation.md).
+
+#### Running
+1. Start Elasticsearch. Served on *localhost:9200* by default.
+2. Have Postgres running. Served on port 5432 by default.
+3. In the **players_backend** folder
+   1. Run `bundle` to install gems
+   2. Create the DB: `rails db:create`
+   3. Migrate the DB: `rails db:migrate`
+   4. Seed the DB: `rails db:seed`
+   5. Index the elasticsearch records:
+      - go into rails console `rails c`
+      - `RushStat.index_all`
+
+   6. Run backend server `rails s`. Served on *localhost:3000* by default
+
+4. In the **players-frontend** folder
+   1. Run `npm i` to install npm packages
+   2. Run `ng s` to start development server. Served on *localhost:4200* by default.
+
+
+5. Open browser and goto [http://localhost:4200/players](http://localhost:4200/players)
+
+#### Sugestions for improvement
+1. Back-end: logic to query DB directly if Elasticserch::Transport erorr encountered
+2. Front-end: style, error message (as a separate service)
+3. Login/security
+4. Tests
+5. ...
+
+#### Disclaimer
+The test app lacks of a number of features to be production-ready mature app.
+Have been built by evenings during the 4 weekdays.
+If something does not work, don't panic, just contact Vadim (vadim.deryabin@protonmail.com)
