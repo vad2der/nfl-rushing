@@ -1,0 +1,45 @@
+require:
+  - rubocop-rspec
+  
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+Layout/SpaceInsideBlockBraces:
+  EnforcedStyleForEmptyBraces: space
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+GlobalVars:
+  AllowedVariables:
+    - $redis
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 140
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*.rb"
+    - "spec/*.rb"
+
+
+AllCops:
+  Exclude:
+    - bin/bundle
+    - bin/rails
+    - bin/rake
+
+  IgnoreMethods: true
+
+  Style/TrivialAccessors:
+    ExactNameMatch: true
+    Enabled: true

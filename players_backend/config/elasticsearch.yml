@@ -1,0 +1,14 @@
+development: &default
+  host: <%= ENV['ELASTICSEARCH_HOST'] %>
+  transport_options:
+    request:
+      timeout: 300
+test:
+  <<: *default
+staging:
+  <<: *default
+production:
+  host: <%= ENV['ELASTICSEARCH_HOST'] %>
+  transport_options:
+    request:
+      timeout: 300
