@@ -59,9 +59,9 @@ If you have any questions regarding requirements, do not hesitate to email your 
 1. Elasticsearch (the solution was build with version 7.10)
    [installation guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 2. PostgreSQL
-   installation guide(https://www.postgresql.org/download/linux/ubuntu/)
+   [installation guide](https://www.postgresql.org/download/linux/ubuntu/)
 3. Ruby
-   installation guide(https://www.ruby-lang.org/en/documentation/installation/)
+   [installation guide](https://www.ruby-lang.org/en/documentation/installation/)
 4. Angular CLI + node
    [installation guide](https://cli.angular.io/)
 
