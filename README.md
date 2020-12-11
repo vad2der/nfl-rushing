@@ -66,9 +66,9 @@ If you have any questions regarding requirements, do not hesitate to email your 
    [installation guide](https://cli.angular.io/)
 
 #### Environmental variables
-    One need to set `DATABASE_USERNAME`, `USERNAME_PASSWORD` and `ELASTICSEARCH_HOST`.
-    Recomendation to use `direnv` tool (put your values to [./players_backend/.envrc](./players_backend/.envrc)).
-    Additional info on direnv is [here](https://github.com/direnv/direnv/blob/master/docs/installation.md).
+One need to set `DATABASE_USERNAME`, `USERNAME_PASSWORD` and `ELASTICSEARCH_HOST`.
+Recomendation to use `direnv` tool (put your values to [./players_backend/.envrc](./players_backend/.envrc)).
+Additional info on direnv is [here](https://github.com/direnv/direnv/blob/master/docs/installation.md).
 
 #### Running
 1. Start Elasticsearch. Served on *localhost:9200* by default.
